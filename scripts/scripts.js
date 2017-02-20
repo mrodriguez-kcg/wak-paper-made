@@ -70,18 +70,26 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
     $('#waypoint3').waypoint(function(direction) { 
             
-      $('.count').each(function () {
-        $('.numbers div.opacity').addClass('fadeInNumbers').removeClass('opacity');
-        $(this).prop('Counter',0).animate({
-          Counter: $(this).text()
-        }, {
-          duration:5000,
+      $('.count').each(function() {
+        var $this = $(this),
+        countTo = $this.attr('data-count');
+
+        $({ countNum: $this.text()}).animate({
+          countNum: countTo
+        },
+
+        {
+          duration: 3000,
           easing:'swing',
-          step:function (now) {
-            $(this).text(Math.ceil(now));
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+          //alert('finished');
           }
-        });
-      }); 
+        });  
+      });
       
       console.log('waypoint 3 triggered');      
       Waypoint.destroyAll();
