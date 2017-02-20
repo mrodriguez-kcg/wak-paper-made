@@ -381,7 +381,7 @@ blockquote {
   bottom:-250px;
   width:206px;
   height:582px;
-  z-index:5;
+  z-index:2;
   opacity:.5;
 }
 .section-2-l-tree-ring {
@@ -1544,7 +1544,45 @@ section.slideshow {
 @media screen and (min-width: 40em) {}
 
 /* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+	.intro {
+		padding:0rem;
+	}
+	.row.video-container {
+		padding:0;
+	}
+	.section-1 {
+		padding:6rem 0 0;
+	}
+	.block-2.swing-left,
+	.block-2.swign-right {
+		margin:0 2rem;
+	}
+	p.year {
+		margin:0 2rem;
+	}
+	.block-4-img img:first-child {
+		position: absolute;
+		z-index: 4;
+		top: 10.5rem;
+		left: 1.5rem;
+	}
+	.block-4-img img:last-child {
+		position: relative;
+		z-index: 3;
+		top: 0rem;
+		left: 4.5rem;
+	}
+	.year-separator-2 {
+		right:-150px;
+	}
+	.section-3 {
+		padding:0rem 0rem;
+	}
+	.down-arrow {
+		display:none;
+	}
+}
 
 /* Large and up */
 @media screen and (min-width: 64em) {}
