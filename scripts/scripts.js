@@ -57,7 +57,6 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     },{
       offset: 500
     });
-  
     $('#waypoint2').waypoint(function(direction) {    
       $(".block-3").addClass("swing-right").removeClass("swing-out");
       $(".block-4").addClass("swing-up").removeClass("swing-out");
@@ -67,17 +66,13 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     },{
       offset: 100
     });  
-
     $('#waypoint3').waypoint(function(direction) { 
-            
       $('.count').each(function() {
         var $this = $(this),
         countTo = $this.attr('data-count');
-
         $({ countNum: $this.text()}).animate({
           countNum: countTo
         },
-
         {
           duration: 3000,
           easing:'swing',
@@ -89,11 +84,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
           //alert('finished');
           }
         });  
-      });
-      
-      console.log('waypoint 3 triggered');      
+      });    
       Waypoint.destroyAll();
-      console.log('BOOOOM!!!');
     },{
       offset:200
     });  
