@@ -1532,6 +1532,12 @@ section.slideshow {
   .section-5 {
     padding:0rem 0 2rem;
   }
+  .numbers p:last-child {
+  	margin-bottom:2rem;
+  }
+  .numbers:last-child p:last-child {
+  	margin-bottom:0;
+  }
 
 
 
